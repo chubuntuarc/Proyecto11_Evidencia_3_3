@@ -24,16 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
     // Declaración de las variables
     private Spinner spinner;
-    private TextView divisa1;
+    private EditText divisa1;
     private TextView resultado;
     private TextView valor;
-    private EditText editDivisa1;
     private Button btnConvertir;
 
     // Variables para el calculo
     private String dato;
-    private double val1;
-    private double val2;
     private String res;
     private String valorDivisa;
 
@@ -50,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Se hace la relación entre las variable Java y las XML
         spinner = (Spinner)findViewById(R.id.spinner);
-        divisa1 = (TextView)findViewById(R.id.txtDivisa1);
+        divisa1 = (EditText)findViewById(R.id.editDivisa1);
         resultado = (TextView)findViewById(R.id.txtResultado);
         btnConvertir = (Button)findViewById(R.id.btnConvertir);
         valor = (TextView)findViewById(R.id.txtValor);
@@ -66,19 +63,24 @@ public class MainActivity extends AppCompatActivity {
                 // Se asigna el valor seleccionado del spinner
                 dato = spinnerDatos[i].toString();
                 c.setSeleccion(dato);
-                c.setVal1(Double.parseDouble(divisa1.getText().toString()));
-                c.mostrarConversion();
-                res = c.getRes();
-                resultado.setText(res);
-                valorDivisa = c.getValorDivisa();
-                valor.setText(valorDivisa);
-
             }
             // ¿Qué ocurre al no seleccionar nada?
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
                 resultado.setText("0");
                 valor.setText("");
+            }
+        });
+
+        btnConvertir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                c.setVal1(Double.parseDouble(divisa1.getText().toString()));
+                c.mostrarConversion();
+                res = c.getRes();
+                resultado.setText(res);
+                valorDivisa = c.getValorDivisa();
+                valor.setText(valorDivisa);
             }
         });
     }
