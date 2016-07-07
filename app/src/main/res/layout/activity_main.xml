@@ -48,7 +48,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText"
+        android:id="@+id/editDivisa1"
         android:layout_below="@+id/txtDivisa1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -58,7 +58,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/editDivisa2"
         android:layout_below="@+id/txtDivisa2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -71,7 +71,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Divisa"
         android:id="@+id/txtDivisa2"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/editDivisa1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:text="convertir"
         android:id="@+id/btnConvertir"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/editDivisa2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="26dp"
