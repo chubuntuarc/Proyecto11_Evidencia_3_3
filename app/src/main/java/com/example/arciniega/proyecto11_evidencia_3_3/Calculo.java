@@ -57,34 +57,34 @@ public class Calculo {
     public void mostrarConversion(){
         switch (seleccion){
             case "MXN - Dólar":
-                    result = val1 * 0.19;
-                    res = String.valueOf(result + "Pesos Méxicanos");
-                    valorDivisa = "Se calcula el Dólar a $19 MXN";
+                    result = val1 * 0.053;
+                    res = String.valueOf("$" + result + " Dólares");
+                    valorDivisa = "Se calcula el MXN a $0.053 Dólar";
                 break;
             case "MXN - Euro":
-                    result = val1 * 0.20;
-                    res = String.valueOf(result + "Euros");
-                    valorDivisa = "Se calcula el Dólar a $20 MXN";
+                    result = val1 * 0.058;
+                    res = String.valueOf("$" + result + " Euros");
+                    valorDivisa = "Se calcula el MXN a $0.058 Euro";
                 break;
             case "Dólar - Euro":
                     result = val1 * 0.90;
-                    res = String.valueOf(result + "Euros");
-                    valorDivisa = "Se calcula el Euro a $0.90 Dólares";
+                    res = String.valueOf("$" + result + " Euros");
+                    valorDivisa = "Se calcula el Dólar a $0.90 Euros";
                 break;
             case "Dólar - MXN":
-                result = val1 * 19;
-                res = String.valueOf(result + "Pesos Méxicanos");
-                valorDivisa = "Se calcula el Dólar a $19 MXN";
+                result = val1 * 18.75;
+                res = String.valueOf("$" + result + " Pesos Méxicanos");
+                valorDivisa = "Se calcula el Dólar a $18.75 MXN";
                 break;
             case "Euro - Dólar":
-                result = val1 * 19;
-                res = String.valueOf(result + "Dólares");
-                valorDivisa = "Se calcula el Euro a $19 Dólares";
+                result = val1 * 1.10;
+                res = String.valueOf("$" + result + " Dólares");
+                valorDivisa = "Se calcula el Euro a $1.10 Dólares";
                 break;
             case "Euro - MXN":
-                result = val1 * 20;
-                res = String.valueOf(result + "Pesos Méxicanos");
-                valorDivisa = "Se calcula el Euro a $20 MXN";
+                result = val1 * 20.81;
+                res = String.valueOf("$" + result + " Pesos Méxicanos");
+                valorDivisa = "Se calcula el Euro a $20.81 MXN";
                 break;
         }
     }
